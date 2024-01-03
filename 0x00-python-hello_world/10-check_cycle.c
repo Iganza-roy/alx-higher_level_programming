@@ -1,6 +1,7 @@
 #include "lists.h"
 
-/**check_cycle - checks if a singly linked list has a cycle in it
+/**
+ * check_cycle - checks if a singly linked list has a cycle in it
  * @list - head of the linked list
  * Return: 0 if there is a cycle, otherwise 1
  */
@@ -19,7 +20,7 @@ int check_cycle(listint_t *list)
 		ptr2 = ptr2->next->next;
 
 		if (ptr1 == ptr2)
-			return (1);		
+			return (1);
 	}
-	return(0);
+	return (0);
 }
