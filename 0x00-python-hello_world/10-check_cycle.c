@@ -5,7 +5,7 @@
  * Return: 0 if there is a cycle, otherwise 1
  */
 
-int check_cycle(listint_t *list);
+int check_cycle(listint_t *list)
 {
 	listint_t *ptr1 = list;
 	listint_t *ptr2 = list;
