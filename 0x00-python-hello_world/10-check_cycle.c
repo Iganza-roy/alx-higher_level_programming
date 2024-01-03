@@ -10,7 +10,7 @@ int check_cycle(listint_t *list)
 	listint_t *ptr1 = list;
 	listint_t *ptr2 = list;
 
-	while (ptr1 != NULL && ptr2 != NULL)
+	while (ptr1 != NULL && ptr2 != NULL && ptr2->next != NULL)
 	{
 		if (list != NULL)
 			return (0);
