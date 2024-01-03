@@ -13,9 +13,6 @@ int check_cycle(listint_t *list)
 
 	while (ptr1 != NULL && ptr2 != NULL && ptr2->next != NULL)
 	{
-		if (list != NULL)
-			return (0);
-
 		ptr1 = ptr1->next;
 		ptr2 = ptr2->next->next;
 
