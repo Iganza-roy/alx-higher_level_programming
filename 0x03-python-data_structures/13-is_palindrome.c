@@ -1,7 +1,7 @@
 #include "lists.h"
-
 #include <stdlib.h>
 #include <stdio.h>
+
 /**
  * rev_list - Reverses a linked list
  * @head: Pointer to the head of the list
