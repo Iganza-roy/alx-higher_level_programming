@@ -1,5 +1,5 @@
 #include "lists.h"
-i
+
 #include <stdlib.h>
 #include <stdio.h>
 /**
@@ -61,4 +61,3 @@ int is_palindrome(listint_t **head)
 	rev_list(sec_half);
 	return (1);
 }
-
