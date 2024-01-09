@@ -1,68 +1,65 @@
+#include <stdio.h>
+#include <stdlib.h>
 #include "lists.h"
 
 /**
- * list_rev - reverses list
- * @head: pointer to 1st node
- * Return: pointer to node in new list
+ * reverse_list - Reverse a linked list
+ * @head: Pointer to the head of the list
+ * Return: Pointer to the new head of the reversed list
  */
-void list_rev(listint_t **head)
+listint_t *reverse_list(listint_t *head)
 {
-	listint_t *first = NULL;
-	listint_t *second = *head;
-	listint_t *third = NULL;
+    listint_t *prev = NULL, *current = head, *next;
 
-	while (second)
-	{
-		third = second->next;
-		second->next = first;
-		first = second;
-		second = third;
-	}
-	*head = first;
+    while (current != NULL)
+    {
+        next = current->next;
+        current->next = prev;
+        prev = current;
+        current = next;
+    }
+
+    return prev;
 }
 
 /**
- * is_palindrome - checks if palindrome
- * @head: pointer to a linked list
- * Return: 1 on success, 0 otherwise
+ * is_palindrome - Check if a linked list is a palindrome
+ * @head: Pointer to the head of the list
+ * Return: 1 if it is a palindrome, 0 otherwise
  */
 int is_palindrome(listint_t **head)
 {
-	listint_t *a = *head, *b = *head, *c = *head, *d = NULL;
+    if (*head == NULL || (*head)->next == NULL)
+        return 1;  // Empty list or single-node list is a palindrome
 
-	if (*head == NULL || (*head)->next == NULL)
-		return (1);
+    listint_t *slow = *head, *fast = *head, *second_half;
 
-	while (1)
-	{
-		b = b->next->next;
-		if (!b)
-		{
-			d = a->next;
-			break;
-		}
-		if (!b->next)
-		{
-			d = a->next->next;
-			break;
-		}
-		a = a->next;
-	}
-	list_rev(&d);
+    while (fast != NULL && fast->next != NULL)
+    {
+        fast = fast->next->next;
+        slow = slow->next;
+    }
 
-	while (d && c)
-	{
-		if (c->n == d->n)
-		{
-			d = d->next;
-			c = c->next;
-		}
-		else
-		{
-			return (0);
-		}
-	}
-	if (!d)
-		return (1);
-	return (0);
+    // If the length of the list is odd, move slow one step forward
+    if (fast != NULL)
+        slow = slow->next;
+
+    second_half = reverse_list(slow);
+    slow = *head;
+
+    while (second_half != NULL)
+    {
+        if (slow->n != second_half->n)
+        {
+            reverse_list(&second_half);  // Restore the second half
+            return 0;  // Not a palindrome
+        }
+
+        slow = slow->next;
+        second_half = second_half->next;
+    }
+
+    reverse_list(&second_half);  // Restore the second half
+    return 1;  // It is a palindrome
 }
+
