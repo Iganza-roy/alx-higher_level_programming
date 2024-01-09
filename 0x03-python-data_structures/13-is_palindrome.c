@@ -1,68 +1,68 @@
 #include "lists.h"
-#include <stdlib.h>
-#include <stdio.h>
 
 /**
- * rev_list - Reverses a linked list
- * @head: Pointer to the head of the list
- * Return: Pointer to the new head of the reversed list
+ * list_rev - reverses list
+ * @head: pointer to 1st node
+ * Return: pointer to node in new list
  */
-listint_t *rev_list(listint_t *head)
+void list_rev(listint_t **head)
 {
-	listint_t *prev, *current, *next;
+	listint_t *first = NULL;
+	listint_t *second = *head;
+	listint_t *third = NULL;
 
-	prev = NULL;
-	current = head;
-
-	while (current != NULL)
+	while (second)
 	{
-		next = current->next;
-		current->next = prev;
-		prev = current;
-		current = next;
+		third = second->next;
+		second->next = first;
+		first = second;
+		second = third;
 	}
-
-	return (prev);
+	*head = first;
 }
 
 /**
- * is_palindrome - Check if a linked list is a palindrome
- * @head: Pointer to the head of the list
- * Return: 1 if it is a palindrome, 0 otherwise
+ * is_palindrome - checks if palindrome
+ * @head: pointer to a linked list
+ * Return: 1 on success, 0 otherwise
  */
 int is_palindrome(listint_t **head)
 {
+	listint_t *a = *head, *b = *head, *c = *head, *d = NULL;
+
 	if (*head == NULL || (*head)->next == NULL)
 		return (1);
 
-	listint_t *slw, *quick, *sec_half;
-
-	slw = *head;
-	quick = *head;
-
-	while (quick != NULL && quick->next != NULL)
+	while (1)
 	{
-		quick = quick->next->next;
-		slw = slw->next;
-	}
-	if (quick != NULL)
-		slw = slw->next;
-
-	sec_half = rev_list(slw);
-	slw = *head;
-
-	while (!sec_half)
-	{
-		if (slw->n != sec_half->n)
+		b = b->next->next;
+		if (!b)
 		{
-			rev_list(sec_half);
+			d = a->next;
+			break;
+		}
+		if (!b->next)
+		{
+			d = a->next->next;
+			break;
+		}
+		a = a->next;
+	}
+	list_rev(&d);
+
+	while (d && c)
+	{
+		if (c->n == d->n)
+		{
+			d = d->next;
+			c = c->next;
+		}
+		else
+		{
 			return (0);
 		}
-
-		slw = slw->next;
-		sec_half = sec_half->next;
 	}
-
-	rev_list(sec_half);
-	return (1);
+	if (!d)
+		return (1);
+	return (0);
 }
