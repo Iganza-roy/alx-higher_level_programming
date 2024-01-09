@@ -9,7 +9,10 @@
  */
 listint_t *rev_list(listint_t *head)
 {
-	listint_t *prev = NULL, *current = head, *next;
+	listint_t *prev, *current, *next;
+
+	prev = NULL;
+	current = head;
 
 	while (current != NULL)
 	{
@@ -33,6 +36,7 @@ int is_palindrome(listint_t **head)
 		return (1);
 
 	listint_t *slw, *quick, *sec_half;
+
 	slw = *head;
 	quick = *head;
 
@@ -41,7 +45,6 @@ int is_palindrome(listint_t **head)
 		quick = quick->next->next;
 		slw = slw->next;
 	}
-
 	if (quick != NULL)
 		slw = slw->next;
 
