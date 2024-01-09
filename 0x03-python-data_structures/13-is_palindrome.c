@@ -33,8 +33,8 @@ int is_palindrome(listint_t **head)
 		return (1);
 
 	listint_t *slw, *quick, *sec_half;
-	*slw = *head
-	*quick = *head
+	slw = *head;
+	quick = *head;
 
 	while (quick != NULL && quick->next != NULL)
 	{
