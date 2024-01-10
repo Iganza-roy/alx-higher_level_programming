@@ -6,8 +6,8 @@ def best_score(a_dictionary):
     greatest_val = float('-inf')
 
     for key, value in a_dictionary.items():
-        if value > greatest_value:
+        if value > greatest_val:
             greatest_key = key
-            greatest_value = value
+            greatest_val = value
                 
     return greatest_key
