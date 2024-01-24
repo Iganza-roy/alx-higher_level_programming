@@ -13,6 +13,7 @@ class Square:
             size must be an integer and greater than 0
         """
         self.size = size
+
     @property
     def size(self):
         """set the current size of the square"""
@@ -24,7 +25,7 @@ class Square:
             raise TypeError("size must be an integer")
         elif value < 0:
             raise ValueError("size must be >= 0")
-        self.__size = size
+        self.__size = value
 
     def area(self):
         """public instance method that returns the current square area"""
