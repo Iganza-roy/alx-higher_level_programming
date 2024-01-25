@@ -32,7 +32,8 @@ class Square:
         return (self.__size ** 2)
 
     def my_print(self):
-        """public instance method that prints in stdout the square with the character #"""
+        """public instance method that prints in stdout the square 
+        with the character #"""
         for i in range(0, self.__size):
             [print("#", end="") for j in range(self.__size)]
             print("")
