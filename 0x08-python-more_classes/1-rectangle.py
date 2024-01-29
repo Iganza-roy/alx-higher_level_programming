@@ -6,7 +6,6 @@ a class defining a rectangle
 
 class Rectangle:
     """A class representing a rectangle"""
-    
     def __init__(self, width=0, height=0):
         """initializing a rectangle
 
@@ -29,7 +28,7 @@ class Rectangle:
         if value < 0:
             raise ValueError("width must be >= 0")
         self.__width = value
-    
+
     @property
     def height(self):
         """setting the height of the rectangle"""
