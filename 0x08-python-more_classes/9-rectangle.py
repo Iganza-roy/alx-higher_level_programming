@@ -69,7 +69,7 @@ class Rectangle:
 
     @staticmethod
     def bigger_or_equal(rect_1, rect_2):
-        """Return the Rectangle with the greater area.
+        """Return the biggest rectangle based on area
 
         Args:
             rect_1 (Rectangle): The first Rectangle.
@@ -84,6 +84,15 @@ class Rectangle:
         if rect_1.area() >= rect_2.area():
             return (rect_1)
         return (rect_2)
+
+    @classmethod
+    def square(cls, size=0):
+        """Return a new Rectangle with equivalent width, height and size.
+
+        Args:
+            size (int): The width and height of the new Rectangle.
+        """
+        return (cls(size, size))
 
     def __str__(self):
         """
