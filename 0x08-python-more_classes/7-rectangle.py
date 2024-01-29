@@ -77,7 +77,7 @@ class Rectangle:
 
         rect = [''.join([(str(self.print_symbol)) for _ in range(self.__width)]) + '\n'
                 for _ in range(self.__height - 1)]
-        rect.append(''.join(['#' for _ in range(self.__width)]))
+        rect.append(''.join([(str(self.print_symbol)) for _ in range(self.__width)]))
         return ''.join(rect)
 
     def __repr__(self):
