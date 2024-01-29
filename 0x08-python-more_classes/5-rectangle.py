@@ -78,4 +78,3 @@ class Rectangle:
         prints an error message when an instance of the rectangle is deleted
         """
         print("Bye rectangle...")
-
