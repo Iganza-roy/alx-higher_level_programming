@@ -1,6 +1,8 @@
 #!/usr/bin/python3
 """
 creating a function that adds two integers
+a and b must be integers or floats
+a and b must be first casted to integers if they are float
 """
 
 
