@@ -24,6 +24,8 @@ def text_indentation(text):
             print(sentence.strip())
             print()
             sentence = ""
+        elif char.isspace():  # Check for spaces
+            continue
 
     if sentence:
         print(sentence.strip())
