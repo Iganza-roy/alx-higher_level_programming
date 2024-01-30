@@ -1,0 +1,193 @@
+Trying:
+    matrix_divided = __import__('2-matrix_divided').matrix_divided
+Expecting nothing
+ok
+Trying:
+    matrix = [
+        [3, 6, 9],
+        [12, 15, 18]
+    ]
+Expecting nothing
+ok
+Trying:
+    print(matrix_divided(matrix, 3))
+Expecting:
+    [[1.0, 2.0, 3.0], [4.0, 5.0, 6.0]]
+ok
+Trying:
+    matrix = [
+        [1, 2, 3],
+        [4, 5, 6]
+    ]
+Expecting nothing
+ok
+Trying:
+    print(matrix_divided(matrix, 3))
+Expecting:
+    [[0.33, 0.67, 1.0], [1.33, 1.67, 2.0]]
+ok
+Trying:
+    print(matrix)
+Expecting:
+    [[1, 2, 3], [4, 5, 6]]
+ok
+Trying:
+    matrix = [
+        [1.1, -2.2, 3.3],
+        [4.4, 5.5, -6.6]
+    ]
+Expecting nothing
+ok
+Trying:
+    print(matrix_divided(matrix, 3))
+Expecting:
+    [[0.37, -0.73, 1.1], [1.47, 1.83, -2.2]]
+ok
+Trying:
+    matrix = [
+        [1, -2.2, 3, 4.4, 5],
+        [-6.6, 7.00, 8, 9.999, 10]
+    ]
+Expecting nothing
+ok
+Trying:
+    print(matrix_divided(matrix, 3))
+Expecting:
+    [[0.33, -0.73, 1.0, 1.47, 1.67], [-2.2, 2.33, 2.67, 3.33, 3.33]]
+ok
+Trying:
+    matrix = "string_invalid"
+Expecting nothing
+ok
+Trying:
+    print(matrix_divided(matrix, 3))
+Expecting:
+    Traceback (most recent call last):
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
+ok
+Trying:
+    matrix = None
+Expecting nothing
+ok
+Trying:
+    print(matrix_divided(matrix, 3))
+Expecting:
+    Traceback (most recent call last):
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
+ok
+Trying:
+    matrix = []
+Expecting nothing
+ok
+Trying:
+    print(matrix_divided(matrix, 3))
+Expecting:
+    Traceback (most recent call last):
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
+ok
+Trying:
+    matrix = [[]]
+Expecting nothing
+ok
+Trying:
+    print(matrix_divided(matrix, 3))
+Expecting:
+    [[]]
+ok
+Trying:
+    matrix = [1, 2, 3]
+Expecting nothing
+ok
+Trying:
+    print(matrix_divided(matrix, 3))
+Expecting:
+    Traceback (most recent call last):
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
+ok
+Trying:
+    matrix = [
+        [1, 2, 3],
+        [4, "not a number", 6]
+    ]
+Expecting nothing
+ok
+Trying:
+    print(matrix_divided(matrix, 3))
+Expecting:
+    Traceback (most recent call last):
+    TypeError: matrix must be a matrix (list of lists) of integers/floats 
+**********************************************************************
+File "./tests/2-matrix_divided.txt", line 69, in 2-matrix_divided.txt
+Failed example:
+    print(matrix_divided(matrix, 3))
+Expected:
+    Traceback (most recent call last):
+    TypeError: matrix must be a matrix (list of lists) of integers/floats 
+Got:
+    Traceback (most recent call last):
+      File "/usr/lib/python3.8/doctest.py", line 1336, in __run
+        exec(compile(example.source, filename, "single",
+      File "<doctest 2-matrix_divided.txt[21]>", line 1, in <module>
+        print(matrix_divided(matrix, 3))
+      File "/alx-higher_level_programming/0x07-python-test_driven_development/2-matrix_divided.py", line 20, in matrix_divided
+        raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
+Trying:
+    matrix = [
+        [1, 2, 3, 4],
+        [5, 6, 7]
+    ]
+Expecting nothing
+ok
+Trying:
+    print(matrix_divided(matrix, 3))
+Expecting:
+    Traceback (most recent call last):
+    TypeError: Each row of the matrix must have the same size
+**********************************************************************
+File "./tests/2-matrix_divided.txt", line 77, in 2-matrix_divided.txt
+Failed example:
+    print(matrix_divided(matrix, 3))
+Expected:
+    Traceback (most recent call last):
+    TypeError: Each row of the matrix must have the same size
+Got:
+    Traceback (most recent call last):
+      File "/usr/lib/python3.8/doctest.py", line 1336, in __run
+        exec(compile(example.source, filename, "single",
+      File "<doctest 2-matrix_divided.txt[23]>", line 1, in <module>
+        print(matrix_divided(matrix, 3))
+      File "/alx-higher_level_programming/0x07-python-test_driven_development/2-matrix_divided.py", line 22, in matrix_divided
+        raise TypeError("Each row of a matrix must have a same size")
+    TypeError: Each row of a matrix must have a same size
+Trying:
+    matrix = [
+        [1, 2, 3],
+        [4, 5, 6]
+    ]
+Expecting nothing
+ok
+Trying:
+    print(matrix_divided(matrix, "not a number"))
+Expecting:
+    Traceback (most recent call last):
+    TypeError: div must be a number
+ok
+Trying:
+    print(matrix_divided(matrix, None))
+Expecting:
+    Traceback (most recent call last):
+    TypeError: div must be a number
+ok
+Trying:
+    print(matrix_divided(matrix, 0))
+Expecting:
+    Traceback (most recent call last):
+    ZeroDivisionError: division by zero
+ok
+**********************************************************************
+1 items had failures:
+   2 of  28 in 2-matrix_divided.txt
+28 tests in 1 items.
+26 passed and 2 failed.
+***Test Failed*** 2 failures.
