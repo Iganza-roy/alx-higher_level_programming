@@ -1,0 +1,54 @@
+Trying:
+    say_my_name = __import__('3-say_my_name').say_my_name
+Expecting nothing
+ok
+Trying:
+    say_my_name("major", "man")
+Expecting:
+    My name is major man
+ok
+Trying:
+    say_my_name("steve owen", "james")
+Expecting:
+    My name is steve owen james
+ok
+Trying:
+    say_my_name("Roy")
+Expecting:
+    My name is Roy 
+ok
+Trying:
+    say_my_name(6, "James")
+Expecting:
+    Traceback (most recent call last):
+    TypeError: first_name must be a string
+ok
+Trying:
+    say_my_name("mike", ["james", "king", "steve"])
+Expecting:
+    Traceback (most recent call last):
+    TypeError: last_name must be a string
+ok
+Trying:
+    say_my_name({"major": 6, "man": 23}, 7.7)
+Expecting:
+    Traceback (most recent call last):
+    TypeError: first_name must be a string
+ok
+Trying:
+    say_my_name(None)
+Expecting:
+    Traceback (most recent call last):
+    TypeError: first_name must be a string
+ok
+Trying:
+    say_my_name()
+Expecting:
+    Traceback (most recent call last):
+    TypeError: say_my_name() missing 1 required positional argument: 'first_name'
+ok
+1 items passed all tests:
+   9 tests in 3-say_my_name.txt
+9 tests in 1 items.
+9 passed and 0 failed.
+Test passed.
