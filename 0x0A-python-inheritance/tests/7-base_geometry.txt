@@ -49,7 +49,7 @@ Checking for integer < 0;
           ValueError: integer must be greater than 0
 
 Checking for non-integer types:
-	  >>> b.integer_validator("bool", True)
+	  >>> b.integer_validator("bool", 1.5)
 	  Traceback (most recent call last):
           ...
           TypeError: bool must be an integer
