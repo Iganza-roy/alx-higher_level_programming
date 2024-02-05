@@ -9,5 +9,8 @@ class MyList(list):
     Defining the function
     """
     def print_sorted(self):
-        sorted_list = sorted(self)
-        print(sorted_list)
+        """
+        Public instance method: def print_sorted(self): that prints the list,
+        but sorted (ascending sort)
+        """
+        print(sorted(self))
