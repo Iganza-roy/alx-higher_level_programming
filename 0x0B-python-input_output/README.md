@@ -1,4 +1,4 @@
-![logo](https://i.morioh.com/2020/04/11/02e4f4ae6ba3.jpg)
+![logo](https://i.ytimg.com/vi/Rv2rKCpO5tk/maxresdefault.jpg)
 
 # python-input_output
 A file is a container that stores information. In computer systems, a file is a contiguous set of bytes. Data in a computer system is always stored into files. Files can take different forms depending on the user requirements like data files, text files, program executable file etc.
