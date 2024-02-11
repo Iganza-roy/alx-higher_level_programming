@@ -96,6 +96,9 @@ class Rectangle(Base):
 
         rec_lines = [
                 ' ' * self.x + '#' * self.width
-                for _ in range(sef.y, self.y + self.height)
+                for _ in range(self.y, self.y + self.height)
                 ]
+        for line in rec_lines:
+            print(line)
+
         return rec_lines
