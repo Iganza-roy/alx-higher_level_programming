@@ -15,11 +15,11 @@ class Rectangle(Base):
         Initialize a new Rectangle.
 
         Args:
-            width (int): The width of the new Rectangle.
-            height (int): The height of the new Rectangle.
-            x (int): The x coordinate of the new Rectangle.
-            y (int): The y coordinate of the new Rectangle.
-            id (int): The identity of the new Rectangle.
+            width (int): The width of the Rectangle.
+            height (int): The height of the  Rectangle.
+            x (int): The x coordinate of the Rectangle.
+            y (int): The y coordinate of the Rectangle.
+            id (int): The identity of the Rectangle.
         Raises:
             TypeError: If either of width or height is not an int.
             ValueError: If either of width or height <= 0.
@@ -83,3 +83,4 @@ class Rectangle(Base):
         if value < 0:
             raise ValueError("y must be >= 0")
         self.__y = value
+
