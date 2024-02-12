@@ -2,6 +2,7 @@
 """
 creating a class base
 """
+import json
 
 
 class Base:
@@ -27,7 +28,7 @@ class Base:
         """
         returns the JSON string representation of list_dictionaries
         """
-        if list_dictionaries is None or list_dictionaries = []:
+        if list_dictionaries is None or list_dictionaries == []:
             return "[]"
         return json.dumps(list_dictionaries)
 
@@ -39,7 +40,7 @@ class Base:
          Args:
             list_objs (list): is a list of instances wich inherits of Base
         """
-        fname = cls.__name___ + ".json"
+        fname = cls.__name__ + ".json"
         with open(fname, "w") as j:
             if list_objs is None:
                 j.write("[]")
