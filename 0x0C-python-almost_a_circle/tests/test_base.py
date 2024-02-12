@@ -5,6 +5,7 @@ from models.base import Base
 from models.rectangle import Rectangle
 from models.square import Square
 
+
 class Test_Base(unittest.TestCase):
 
     def test_base_creation(self):
@@ -46,6 +47,7 @@ class Test_Base(unittest.TestCase):
         r = Rectangle(10, 7, 2, 8, 6)
         json_str = Base.to_json_string([r.to_dictionary()])
         self.assertEqual(str, type(json_str))
+
 
 if __name__ == '__main__':
     unittest.main()

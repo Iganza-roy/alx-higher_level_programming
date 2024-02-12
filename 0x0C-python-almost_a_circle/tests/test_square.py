@@ -24,10 +24,14 @@ class TestSquareInstantiation(unittest.TestCase):
     def test_no_args(self):
         with self.assertRaises(TypeError):
             Square()
-        invalid_sizes = [None, "invalid", 5.5, complex(5), {"a": 1, "b": 2}, True, [1, 2, 3]]
+        invalid_sizes = [None, "invalid", 5.5, complex(5), {
+            "a": 1, "b": 2
+            }, True, [1, 2, 3]]
         for size in invalid_sizes:
             with self.subTest(size=size):
-                with self.assertRaisesRegex(TypeError, "width must be an integer"):
+                with self.assertRaisesRegex(
+                        TypeError, "width must be an integer
+                        "):
                     Square(size)
 
     def test_negative_and_zero_size(self):
@@ -38,7 +42,9 @@ class TestSquareInstantiation(unittest.TestCase):
                     Square(size, 2)
 
     def test_invalid_value_for_x_and_y(self):
-        invalid_values = [None, "invalid", 5.5, complex(5), {"a": 1, "b": 2}, True, [1, 2, 3]]
+        invalid_values = [None, "invalid", 5.5, complex(5), {
+            "a": 1, "b": 2
+            }, True, [1, 2, 3]]
         for value in invalid_values:
             with self.subTest(value=value):
                 with self.assertRaisesRegex(TypeError, "x must be an integer"):
