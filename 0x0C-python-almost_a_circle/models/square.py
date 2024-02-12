@@ -73,7 +73,7 @@ class Square(Rectangle):
     def to_dictionary(self):
         """public method returns dict representation of square"""
         return {
-                "id": self.id
+                "id": self.id,
                 "size": self.size,
                 "x": self.x,
                 "y": self.y
