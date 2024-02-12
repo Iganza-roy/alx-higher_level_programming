@@ -1,7 +1,9 @@
 #!/usr/bin/python3
 """
-new classe square
+new classes square
 """
+from models.rectangle import Rectangle 
+
 
 class Square(Rectangle):
     """
@@ -17,20 +19,20 @@ class Square(Rectangle):
         y (int): y coordinate
         id (int): identitiy of square
         """
-        super().__init(size, size, x, y, id)
+        super().__init__(size, size, x, y, id)
 
-        @property
-        def size(self):
-            """set/get size of square"""
-            return self.width
+    @property
+    def size(self):
+        """set/get size of square"""
+        return self.width
 
-        @size.setter
-        def size(self, value):
-            """setting the size of square"""
-            self.width = value
-            self.height = value
+    @size.setter
+    def size(self, value):
+        """setting the size of square"""
+        self.width = value
+        self.height = value
 
-        def update(self, *args, **kwargs):
+    def update(self, *args, **kwargs):
         """public method that assigns an argument to each attribute"""
         if args and len(args) != 0:
             ar = 0
