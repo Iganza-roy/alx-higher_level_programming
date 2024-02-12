@@ -30,8 +30,8 @@ class TestSquareInstantiation(unittest.TestCase):
         for size in invalid_sizes:
             with self.subTest(size=size):
                 with self.assertRaisesRegex(
-                        TypeError, "width must be an integer
-                        "):
+                        TypeError, "width must be an integer"
+                        ):
                     Square(size)
 
     def test_negative_and_zero_size(self):
