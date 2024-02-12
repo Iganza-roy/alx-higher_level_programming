@@ -106,8 +106,8 @@ class Rectangle(Base):
                 self.id, self.x, self.y, self.width, self.height
                 )
 
-        def update(self, *args, **kwargs):
-            """public method that assigns an argument to each attribute"""
+    def update(self, *args, **kwargs):
+        """public method that assigns an argument to each attribute"""
         if args and len(args) != 0:
             ar = 0
             for arg in args:
@@ -140,7 +140,7 @@ class Rectangle(Base):
                 elif i == "x":
                     self.x = j
                 elif i == "y":
-                    self.y = j
+                         self.y = j
 
     def to_dictionary(self):
         """public method; returns the dict representation of the rectangle"""
