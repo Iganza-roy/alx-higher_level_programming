@@ -140,7 +140,7 @@ class Rectangle(Base):
                 elif i == "x":
                     self.x = j
                 elif i == "y":
-                         self.y = j
+                    self.y = j
 
     def to_dictionary(self):
         """public method; returns the dict representation of the rectangle"""
