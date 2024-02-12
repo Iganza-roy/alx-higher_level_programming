@@ -62,7 +62,7 @@ class TestRectangle(unittest.TestCase):
             r.display()
             captured_output = buffer.getvalue()
 
-        expected_output = ' ###\n ###\n ###\n ###\n'
+        expected_output = '\n\n ###\n ###\n ###\n ###\n'
         self.assertEqual(captured_output, expected_output)
 
     def test_str(self):
