@@ -2,7 +2,7 @@
 """
 new classes square
 """
-from models.rectangle import Rectangle 
+from models.rectangle import Rectangle
 
 
 class Square(Rectangle):
@@ -72,4 +72,9 @@ class Square(Rectangle):
 
     def to_dictionary(self):
         """public method returns dict representation of square"""
-
+        return {
+                "id": self.id
+                "size": self.size,
+                "x": self.x,
+                "y": self.y
+                }
