@@ -90,18 +90,15 @@ class Rectangle(Base):
 
     def display(self):
         """public method that prints '#' in the STDOUT"""
-        if self.height == 0 or self.width == 0:
+        if self.width == 0 or self.height == 0:
             print("")
             return
 
-        rec_lines = [
-                ' ' * self.x + '#' * self.width
-                for _ in range(self.y, self.y + self.height)
-                ]
-        for line in rec_lines:
-            print(line)
-
-        return rec_lines
+        [print("") for y in range(self.y)]
+        for h in range(self.height):
+            [print(" ", end="") for x in range(self.x)]
+            [print("#", end="") for w in range(self.width)]
+            print("")
 
     def __str__(self):
         """obtains the string representation of a rectangle"""
@@ -109,8 +106,8 @@ class Rectangle(Base):
                 self.id, self.x, self.y, self.width, self.height
                 )
 
-    def update(self, *args, **kwargs):
-        """public method that assigns an argument to each attribute"""
+        def update(self, *args, **kwargs):
+            """public method that assigns an argument to each attribute"""
         if args and len(args) != 0:
             ar = 0
             for arg in args:
