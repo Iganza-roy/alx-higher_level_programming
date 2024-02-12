@@ -3,6 +3,7 @@
 creating a class base
 """
 import json
+import csv
 
 
 class Base:
@@ -100,10 +101,10 @@ class Base:
                 csvfile.write("[]")
             else:
                 if cls.__name__ == "Rectangle":
-                    fields = ["id", "width", "height", "x", "y"]
+                    fieldnames = ["id", "width", "height", "x", "y"]
                 else:
-                    fields = ["id", "size", "x", "y"]
-                writer = csv.DictWriter(csvfile, fields=fields)
+                    fieldnames = ["id", "size", "x", "y"]
+                writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
                 for obj in list_objs:
                     writer.writerow(obj.to_dictionary())
 
@@ -122,10 +123,10 @@ class Base:
         try:
             with open(fname, "r", newline="") as csvfile:
                 if cls.__name__ == "Rectangle":
-                    fields = ["id", "width", "height", "x", "y"]
+                    fieldnames = ["id", "width", "height", "x", "y"]
                 else:
-                    fields = ["id", "size", "x", "y"]
-                list_dicts = csv.DictReader(csvfile, fields=fields)
+                    fieldnames = ["id", "size", "x", "y"]
+                list_dicts = csv.DictReader(csvfile, fieldnames=fieldnames)
                 list_dicts = [dict([k, int(v)] for k, v in d.items())
                               for d in list_dicts]
                 return [cls.create(**d) for d in list_dicts]
