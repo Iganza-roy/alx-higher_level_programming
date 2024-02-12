@@ -102,3 +102,9 @@ class Rectangle(Base):
             print(line)
 
         return rec_lines
+
+    def __str__(self):
+        """obtains the string representation of a rectangle"""
+        return "[Rectangle] ({}) {}/{} - {}/{}".format(
+                self.id, self.x, self.y, self.width, self.height
+                )
