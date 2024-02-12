@@ -69,3 +69,7 @@ class Square(Rectangle):
         return "[Square] ({}) {}/{} - {}".format(
                 self.id, self.x, self.y, self.size
                 )
+
+    def to_dictionary(self):
+        """public method returns dict representation of square"""
+

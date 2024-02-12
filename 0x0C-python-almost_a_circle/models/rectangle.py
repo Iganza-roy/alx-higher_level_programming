@@ -144,3 +144,13 @@ class Rectangle(Base):
                     self.x = j
                 elif i == "y":
                     self.y = j
+
+    def to_dictionary(self):
+        """public method; returns the dict representation of the rectangle"""
+        return {
+                "id": self.id,
+                "width": self.width,
+                "height": self.height,
+                "x": self.x,
+                "y": self.y
+                }
