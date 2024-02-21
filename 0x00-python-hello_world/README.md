@@ -1,1 +1,1 @@
-First directory under introduction to python programming language
+# HELLO WORLD!
