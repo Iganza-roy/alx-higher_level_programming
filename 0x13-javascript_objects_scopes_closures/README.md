@@ -2,8 +2,9 @@
 
 ![logo](https://www.tabnine.com/academy/wp-content/uploads/2020/10/academy_3.png)
 
-This repo contains my tasks on JavaSriptc - Objects, scopes and closures project.
-Every code written here follows the [semi standard](https://github.com/standard/semistandard) style for coding:
+<p>This repo contains my tasks on JavaSriptc - Objects, scopes and closures project.</p>
+
+<p>Every code written here follows the <a href = "https://github.com/standard/semistandard">semi standard</a> style for coding:</p>
 ![standard](https://raw.githubusercontent.com/standard/semistandard/master/badge.svg) 
 
 An **object** is a collection of related data and/or functionality. These usually consist of several variables and functions (which are called properties and methods when they are inside objects). 
