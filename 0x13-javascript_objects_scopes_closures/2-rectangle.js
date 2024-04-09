@@ -3,10 +3,10 @@
 class Rectangle {
   constructor (w, h) {
     if (w <= 0 || h <= 0) {
-        return {};
+      return {};
     } else {
-        this.width = w;
-        this.height = h;
+      this.width = w;
+      this.height = h;
     }
   }
 }
