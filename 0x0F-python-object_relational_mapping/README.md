@@ -15,12 +15,15 @@ ORMs provide a high-level abstraction upon a relational database that allows a d
 <p>
 For example, without an ORM a developer would write the following SQL statement to retrieve every row in the USERS table where the zip_code column is 94107:
 </p>
+
 ```
 SELECT * FROM USERS WHERE zip_code=94107;
 ```
+
 <p>
 The equivalent Django ORM query would instead look like the following Python code:
 </p>
+
 ```
 # obtain everyone in the 94107 zip code and assign to users variable
 users = Users.objects.filter(zip_code=94107)
