@@ -5,7 +5,7 @@ This repo contains my tasks on the object-relational mapping project
 ## Object-relational Mappers (ORMs)
 <p>An object-relational mapper (ORM) is a code library that automates the transfer of data stored in relational database tables into objects that are more commonly used in application code.</p>
 
-<img scr="https://www.fullstackpython.com/img/visuals/orms-bridge.png">
+![new](https://www.fullstackpython.com/img/visuals/orms-bridge.png)
 
 <h2>Why are ORMs useful?</h2>
 <p>
