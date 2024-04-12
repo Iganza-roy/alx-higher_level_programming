@@ -15,7 +15,7 @@ if __name__ == "__main__":
                 )
         cur = db.cursor()
 
-        cur.execute("SELECT * FROM states WHERE name LIKE 'N%' ORDER BY id ASC")
+        cur.execute("SELECT * FROM states WHERE name LIKE 'N%' ORDER BY id")
 
         out = cur.fetchall()
 
@@ -26,4 +26,4 @@ if __name__ == "__main__":
         db.close()
 
     except MySQLdb.Error as e:
-        print("Error:", e)
+        print("My SQL Error:", e)
