@@ -26,7 +26,6 @@ if __name__ == "__main__":
         for res in out:
             print(res)
 
-
         cur.close()
         dbs.close()
 
