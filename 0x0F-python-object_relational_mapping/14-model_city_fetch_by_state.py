@@ -22,4 +22,4 @@ if __name__ == "__main__":
     joint = session.query(City, State).join(State).all()
 
     for city, state in joint:
-        print("{} ({}) {}".format(state.name, city.id, city.name))
+        print("{}: ({}) {}".format(state.name, city.id, city.name))
