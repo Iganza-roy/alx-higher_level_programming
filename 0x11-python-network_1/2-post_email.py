@@ -7,8 +7,9 @@ import urllib.request
 import sys
 
 if __name__ == "__main__":
-    url, email = sys.argv[1], sys.argv[2].encode('utf-8')
-    req = urllib.request.Request(url, data=email, method='POST')
+    url, email = sys.argv[1], sys.argv[2]
+    email_enc = email.encode('utf-8')
+    req = urllib.request.Request(url, data=email_enc, method='POST')
     with urllib.request.urlopen(req) as response:
         req_data = response.read().decode('utf-8')
 
