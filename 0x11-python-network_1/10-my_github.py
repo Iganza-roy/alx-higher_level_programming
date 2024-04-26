@@ -17,6 +17,3 @@ if __name__ == "__main__":
     if r.status_code == 200:
         u_id = r.json().get("id")
         print(u_id)
-
-    else:
-        pass
