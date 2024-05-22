@@ -3,7 +3,6 @@
 ![logo](https://www.tabnine.com/academy/wp-content/uploads/2020/10/academy_3.png)
 
 <p>This repo contains my tasks on JavaSriptc - Objects, scopes and closures project.</p>
-
 <p>Every code written here follows the <a href = "https://github.com/standard/semistandard">semi standard</a> style for coding:</p>
 
 ![standard](https://raw.githubusercontent.com/standard/semistandard/master/badge.svg) 
