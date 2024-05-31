@@ -1,1 +1,1 @@
-document.querySelector('header').sty;e.color = 'red';
+document.querySelector('header').style.color = 'red';
